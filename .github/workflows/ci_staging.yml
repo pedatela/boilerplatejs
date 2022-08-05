@@ -2,6 +2,8 @@ name: Staging CI
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -16,4 +18,15 @@ jobs:
       - run: npm test -- --coverage
         env:
           CI: true
+      - name: Create Release
+        if: github.event_name == 'push'
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Build Image
+      #   if: github.event_name == 'push'
+      #   run: npm start  
+      # - name: Deploy to Staging
+      #   if: github.event_name == 'push'
+      #   run: npm start
 
