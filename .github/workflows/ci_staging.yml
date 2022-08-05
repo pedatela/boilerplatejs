@@ -23,6 +23,7 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       # - name: Build Image
       #   if: github.event_name == 'push'
       #   run: npm start  
