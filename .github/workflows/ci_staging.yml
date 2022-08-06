@@ -35,7 +35,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/boilerplate_node:${{ github.event.release.tag_name }} ${{ secrets.DOCKER_HUB_USERNAME }}/boilerplate_node:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/boilerplate_node:latest
       # - name: Build Image
       #   if: github.event_name == 'push'
       #   run: npm start  
