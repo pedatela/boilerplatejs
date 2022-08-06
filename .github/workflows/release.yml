@@ -4,7 +4,7 @@ on:
     types: [published]
 
 jobs:
-  Publish Docker Image:
+  publish-docker-image:
     runs-on: ubuntu-latest
     steps:
       - name: Login to DockerHub
