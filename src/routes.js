@@ -6,5 +6,6 @@ const HealthCheckController = require('./app/controllers/HealthCheckController')
 const routes = new Router();
 
 routes.get('/healthcheck', HealthCheckController.index);
+// Teste
 
 module.exports = routes
