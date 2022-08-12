@@ -10,6 +10,9 @@ RUN npm ci --only=production
 
 COPY . .
 
+ENV HOST=
+ENV PORT=
+
 EXPOSE 5000
 
 CMD [ "node", "src/server.js" ]

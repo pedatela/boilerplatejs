@@ -1,5 +1,4 @@
+require('dotenv')
 const app = require('./app');
-const PORT = 5000
-const HOST = 'localhost'
 
-app.listen(PORT, () => { console.log(`Up and running on a port: ${PORT} and host is ${HOST}`); })
+app.listen(process.env.PORT, () => { console.log(`Up and running on a port: ${process.env.PORT} and host is ${process.env.HOST}`); })
