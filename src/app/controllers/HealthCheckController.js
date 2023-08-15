@@ -8,7 +8,7 @@ class HealthCheckController {
             date: moment()
         };
         try {
-            return res.status(201).json(healthcheck);
+            return res.status(200).json(healthcheck);
         } catch (error) {
             healthcheck.message = error;
             return res.status(503).json({message: "HealthCheck error"});
